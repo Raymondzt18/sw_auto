@@ -2,7 +2,9 @@ from utils import *
 
 click_5_energy_start()
 
-while True:
+loop_num = 0
+
+while loop_num < 21:
 
     #click_5_energy_start()
 
@@ -19,6 +21,10 @@ while True:
     time.sleep(sleeptime)
 
     click_victory()
+
+    loop_num = loop_num + 1
+
+    print("Succeeded " +  str(loop_num) + " times!")
 
     sleeptime = random.uniform(1,1.5)
     print("Sleeping for " + str(sleeptime) + "secs")
@@ -41,6 +47,9 @@ while True:
         time.sleep(sleeptime)
 
     click_5_energy_replay()
+
+    if find_open_shop(limit = 1):
+        input("Press Enter to continue...")
 
     sleeptime = random.uniform(1,1.5)
     print("Sleeping for " + str(sleeptime) + "secs")

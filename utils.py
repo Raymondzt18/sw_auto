@@ -10,6 +10,16 @@ def find_best_match(list_of_matches):
             best_match = match
     return best_match
 
+def find_open_shop(limit = 1):
+    best_match = None
+    i = 0
+    while i < limit:
+        list_of_matches = list(findAll("images/open_shop.png"))
+        if list_of_matches:
+            return True
+        time.sleep(1)
+        i = i + 1
+    return False
 
 #list_of_matches = list(findAll("images/5_energy_start.png"))
 #click(find_best_match(list_of_matches))
@@ -23,7 +33,7 @@ def click_5_energy_start():
             break
         time.sleep(1)
     click(best_match)
-
+    
 def click_start_battle():
     best_match = None
     while True:
