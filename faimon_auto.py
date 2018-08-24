@@ -8,7 +8,15 @@ while loop_num < 21:
 
     #click_5_energy_start()
 
-    click_victory()
+    find_victory()
+
+    sleeptime = random.uniform(1, 1.5)
+    print("Sleeping for " + str(sleeptime) + "secs")
+    time.sleep(sleeptime)
+
+    if find_max_level(number = 2):
+        print("Atleast 1 monster MAXED!")
+        break
 
     sleeptime = random.uniform(1,1.5)
     print("Sleeping for " + str(sleeptime) + "secs")

@@ -4,7 +4,7 @@ from utils import *
 
 while True:
 
-    click_victory()
+    find_victory()
 
     sleeptime = random.uniform(1,1.5)
     print("Sleeping for " + str(sleeptime) + "secs")

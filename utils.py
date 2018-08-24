@@ -21,6 +21,23 @@ def find_open_shop(limit = 1):
         i = i + 1
     return False
 
+def find_max_level(number = 2):
+    list_of_matches = list(findAll("images/max_level.png"))
+    print("Number of Max Level: "+ str(len(list_of_matches)))
+    if len(list_of_matches) >= number:
+        return True
+    return False
+
+def find_victory():
+    best_match = None
+    while True:
+        list_of_matches = list(findAll("images/victory.png"))
+        if list_of_matches:
+            best_match = find_best_match(list_of_matches)
+            break
+        time.sleep(1)
+
+
 #list_of_matches = list(findAll("images/5_energy_start.png"))
 #click(find_best_match(list_of_matches))
 
